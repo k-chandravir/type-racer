@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    background-image: url(keyboard-background.jpg);
+    background-size: cover;
+}
+
+.title{
+    font-family: 'Sedgwick Ave Display', cursive;
+    letter-spacing: 2px;  
+    margin-top: 20px;
+    text-align: center;
+}
+
+.title span{
+    color: rgb(134, 29, 29);
+}
+
+.title hr{
+    border: 1px solid rgb(134, 29, 29);
+    width: 300px;
+    margin: auto;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 600px;
+    background-color: rgba(230, 52, 52, 0.329);
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+.presentation{
+    margin: 10px 5px;
+    height: 350px;
+    width: 550px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.presentation p{
+    color: black;
+    font-size: 20px;
+    font-family: 'Kanit', sans-serif;
+    letter-spacing: 0.1px;
+
+}
+
+.presentation p span{
+    position: relative;
+}
+
+.presentation p .correct{
+    color: rgba(71, 117, 53, 0.945);
+}
+
+.presentation p .incorrect{
+    color: rgba(209, 40, 40, 0.952);
+    background-color: rgb(233, 152, 166);
+    outline: 1px solid white;
+    border-radius: 5px;
+}
+
+.presentation p .active{
+    color: rgb(113, 113, 253);
+}
+
+.presentation p .active::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    opacity: 0;
+    background: rgb(113, 113, 253);
+    animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity: 1;
+    }
+}
+
+.outputs{
+    display: flex;
+    margin: 10px 5px;
+    width: 550px;
+    height: 50px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: rgba(128, 128, 128, 0.651);
+}
+
+.details li{
+    list-style-type: none;
+    float: left;
+    margin: 5px 10px;
+    padding: 5px 10px;
+}
+
+.outputs button{
+    background-color: rgba(112, 34, 31, 0.76);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    
+}
+
+.outputs button:hover{
+    background-color: rgba(112, 34, 31, 1);;
+}
